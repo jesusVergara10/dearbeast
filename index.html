@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DEARBEAST</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo:wght@800;900&family=Fraunces:wght@300;400&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="hero">
+    <div class="content">
+      <img class="logo" src="Logo.svg" alt="Dearbeast" />
+      <p class="subtitle">
+        We're currently working on creating something lovely. We'll be here
+        soon. Subscribe to be notified.
+      </p>
+      <button class="notify-btn" type="button" id="notifyBtn">Notify me</button>
+    </div>
+  </main>
+
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-box">
+      <button class="modal-close" type="button" id="modalClose" aria-label="Close">
+        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line x1="1.5" y1="1.5" x2="18.5" y2="18.5" stroke="currentColor" stroke-width="1" stroke-linecap="round" />
+          <line x1="18.5" y1="1.5" x2="1.5" y2="18.5" stroke="currentColor" stroke-width="1" stroke-linecap="round" />
+        </svg>
+      </button>
+      <div class="modal-state" id="modalFormState">
+        <img class="modal-logo" src="Logo.svg" alt="Dearbeast" />
+        <p class="modal-subtitle">
+          Tu bestia querida se merece lo mejor. Dearbeast está por llegar,
+          únete a la lista y sé parte de nuestro lanzamiento.
+        </p>
+        <form id="notifyForm" novalidate>
+          <input
+            class="modal-input"
+            type="email"
+            id="emailInput"
+            placeholder="Email Address"
+            required
+          />
+          <button class="notify-btn modal-submit" type="submit">Reservar mi lugar</button>
+          <p class="modal-error" id="modalError"></p>
+        </form>
+        <p class="modal-caption">Acceso anticipado. Sin filas, sin quedarte fuera.</p>
+      </div>
+      <div class="modal-state is-hidden" id="modalSuccessState">
+        <img class="modal-logo" src="Logo.svg" alt="Dearbeast" />
+        <p class="modal-subtitle">Ya estás en la lista. Te avisaremos en cuanto lancemos.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
