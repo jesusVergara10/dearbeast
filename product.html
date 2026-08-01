@@ -1,0 +1,511 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DEARBEAST — Product</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo:wght@800;900&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="home.css" />
+  <link rel="stylesheet" href="product.css" />
+</head>
+<body class="page-product">
+  <!-- ===== Announcement bar + Header (same as home) ===== -->
+  <div class="announcement-bar">
+    Lorem ipsum dolor sit amet consectetur adipiscing elit.
+  </div>
+
+  <header class="site-header is-scrolled" id="siteHeader">
+    <nav class="site-header__nav">
+      <a href="home.html">NEW</a>
+      <a href="home.html">SHOP</a>
+      <a href="home.html">SALE</a>
+      <a href="home.html">ABOUT US</a>
+    </nav>
+
+    <div class="site-header__actions">
+      <button type="button" class="icon-btn" aria-label="Search">
+        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="9" cy="9" r="6.5" stroke="currentColor" />
+          <line x1="18" y1="18" x2="13.5" y2="13.5" stroke="currentColor" stroke-linecap="round" />
+        </svg>
+      </button>
+      <button type="button" class="icon-btn" aria-label="Account">
+        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="10" cy="6.5" r="3.5" stroke="currentColor" />
+          <path d="M2.5 17c1.2-3.5 4.2-5.5 7.5-5.5s6.3 2 7.5 5.5" stroke="currentColor" stroke-linecap="round" />
+        </svg>
+      </button>
+      <button type="button" class="icon-btn" aria-label="Cart">
+        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5 6.5h10l-.9 9.2a1.5 1.5 0 0 1-1.5 1.3H7.4a1.5 1.5 0 0 1-1.5-1.3L5 6.5Z" stroke="currentColor" />
+          <path d="M7.2 6.5V5a2.8 2.8 0 0 1 5.6 0v1.5" stroke="currentColor" />
+        </svg>
+        <span class="icon-btn__count">0</span>
+      </button>
+      <button type="button" class="icon-btn menu-toggle" id="menuToggle" aria-label="Menu">
+        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line x1="2.5" y1="6" x2="17.5" y2="6" stroke="currentColor" stroke-linecap="round" />
+          <line x1="2.5" y1="14" x2="17.5" y2="14" stroke="currentColor" stroke-linecap="round" />
+        </svg>
+      </button>
+    </div>
+
+    <a href="home.html" class="site-header__logo-scrolled">
+      <img src="Logo.svg" alt="Dearbeast" />
+    </a>
+  </header>
+
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="home.html">NEW</a>
+    <a href="home.html">SHOP</a>
+    <a href="home.html">SALE</a>
+    <a href="home.html">ABOUT US</a>
+  </nav>
+
+  <main class="product-page__main">
+    <!-- ===== Breadcrumb ===== -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="home.html">Home</a>
+      <span class="breadcrumb__sep">/</span>
+      <a href="home.html">All Products</a>
+      <span class="breadcrumb__sep">/</span>
+      <span class="breadcrumb__current">Lorem Ipsum Dolor</span>
+    </nav>
+
+    <!-- ===== Main product layout ===== -->
+    <section class="product">
+      <div class="product__gallery">
+        <div class="product__gallery-dots">
+          <span class="product__dot is-active"></span>
+          <span class="product__dot"></span>
+          <span class="product__dot"></span>
+          <span class="product__dot"></span>
+          <span class="product__dot"></span>
+          <span class="product__dot"></span>
+        </div>
+
+        <div class="product__gallery-track">
+          <div class="product__gallery-item placeholder" data-gallery-item></div>
+          <div class="product__gallery-item placeholder" data-gallery-item></div>
+          <div class="product__gallery-item placeholder" data-gallery-item></div>
+          <div class="product__gallery-item placeholder" data-gallery-item></div>
+          <div class="product__gallery-item placeholder" data-gallery-item></div>
+          <div class="product__gallery-item placeholder" data-gallery-item></div>
+        </div>
+      </div>
+
+      <div class="product__info">
+        <p class="product__eyebrow">Lorem Ipsum For Dolor</p>
+        <h1 class="product__title">Lorem Ipsum Dolor</h1>
+
+        <div class="product__meta">
+          <span class="product__price">$49.99</span>
+          <span class="product__rating">
+            <span class="product__stars">★★★★★</span>
+            24 REVIEWS
+          </span>
+        </div>
+
+        <p class="product__desc">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim
+          ad minim veniam quis nostrud exercitation ullamco laboris.
+        </p>
+
+        <div class="product__stock">
+          <span class="product__stock-icon">✓</span> IN STOCK
+          <span class="product__stock-note">Love it or return it within 14 days</span>
+        </div>
+
+        <div class="product__purchase">
+          <div class="qty" id="qty">
+            <button type="button" class="qty__btn" data-qty-decrease aria-label="Decrease quantity">−</button>
+            <span class="qty__value" id="qtyValue">1</span>
+            <button type="button" class="qty__btn" data-qty-increase aria-label="Increase quantity">+</button>
+          </div>
+          <button type="button" class="btn btn--cart">ADD TO CART</button>
+        </div>
+
+        <p class="product__shipping-note">Shipping calculated at checkout.</p>
+
+        <div class="product__badges">
+          <div class="product__badge">
+            <div class="product__badge-icon placeholder"></div>
+            <span>Lorem Ipsum</span>
+          </div>
+          <div class="product__badge">
+            <div class="product__badge-icon placeholder"></div>
+            <span>Dolor Sit</span>
+          </div>
+          <div class="product__badge">
+            <div class="product__badge-icon placeholder"></div>
+            <span>Amet Consectetur</span>
+          </div>
+        </div>
+
+        <div class="accordion">
+          <div class="accordion__item">
+            <button type="button" class="accordion__trigger" data-accordion-trigger>
+              Product Details
+              <span class="accordion__icon">+</span>
+            </button>
+            <div class="accordion__panel">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+          </div>
+          <div class="accordion__item">
+            <button type="button" class="accordion__trigger" data-accordion-trigger>
+              Care
+              <span class="accordion__icon">+</span>
+            </button>
+            <div class="accordion__panel">
+              <p>
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+          </div>
+          <div class="accordion__item">
+            <button type="button" class="accordion__trigger" data-accordion-trigger>
+              Shipping &amp; Returns Policy
+              <span class="accordion__icon">+</span>
+            </button>
+            <div class="accordion__panel">
+              <p>
+                Duis aute irure dolor in reprehenderit in voluptate velit
+                esse cillum dolore eu fugiat nulla pariatur.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="product__share">
+          <span>Share</span>
+          <a href="#" class="share-icon" aria-label="Share on Facebook">f</a>
+          <a href="#" class="share-icon" aria-label="Share on Instagram">◎</a>
+          <a href="#" class="share-icon" aria-label="Share on Pinterest">p</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Customer photos carousel ===== -->
+    <section class="ugc">
+      <div class="ugc__track" id="ugcTrack">
+        <div class="ugc__item placeholder"></div>
+        <div class="ugc__item placeholder"></div>
+        <div class="ugc__item placeholder"></div>
+        <div class="ugc__item placeholder"></div>
+        <div class="ugc__item placeholder"></div>
+        <div class="ugc__item placeholder"></div>
+      </div>
+      <div class="ugc__controls">
+        <button type="button" class="ugc__nav ugc__nav--prev" id="ugcPrev" aria-label="Previous">‹</button>
+        <button type="button" class="ugc__nav ugc__nav--next" id="ugcNext" aria-label="Next">›</button>
+      </div>
+    </section>
+
+    <!-- ===== Feature icon strip (accompanies Various Play) ===== -->
+    <section class="feature-intro">
+      <div class="feature-intro__icons">
+        <div class="feature-intro__icon placeholder"></div>
+        <div class="feature-intro__icon placeholder"></div>
+        <div class="feature-intro__icon placeholder"></div>
+      </div>
+    </section>
+
+    <!-- ===== Feature blocks (Various Play → Playful decor) ===== -->
+    <section class="feature-block">
+      <div class="feature-block__media placeholder"></div>
+      <div class="feature-block__content">
+        <h2>Lorem Ipsum Dolor Sit</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim
+          ad minim veniam quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+      </div>
+    </section>
+
+    <section class="feature-block feature-block--reverse">
+      <div class="feature-block__media placeholder"></div>
+      <div class="feature-block__content">
+        <h2>Sit Amet, Consectetur Adipiscing</h2>
+        <p>
+          Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+          cupidatat non proident, sunt in culpa qui officia deserunt.
+        </p>
+      </div>
+    </section>
+
+    <section class="feature-block">
+      <div class="feature-block__media placeholder"></div>
+      <div class="feature-block__content">
+        <h2>Ut Enim Ad Minim Veniam</h2>
+        <p>
+          Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+          commodo consequat. Duis aute irure dolor in reprehenderit in
+          voluptate velit esse cillum dolore.
+        </p>
+      </div>
+    </section>
+
+    <section class="feature-block feature-block--reverse">
+      <div class="feature-block__media placeholder"></div>
+      <div class="feature-block__content">
+        <h2>Playful Decor For Your Space</h2>
+        <p>
+          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+          officia deserunt mollit anim id est laborum, lorem ipsum dolor sit
+          amet consectetur adipiscing elit.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="faq">
+      <h2 class="faq__heading">Frequently Asked Questions</h2>
+      <div class="faq__list">
+        <div class="faq__item">
+          <button type="button" class="faq__trigger" data-accordion-trigger>
+            Lorem ipsum dolor sit amet consectetur?
+            <span class="accordion__icon">+</span>
+          </button>
+          <div class="faq__panel">
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+        </div>
+        <div class="faq__item">
+          <button type="button" class="faq__trigger" data-accordion-trigger>
+            Duis aute irure dolor in reprehenderit?
+            <span class="accordion__icon">+</span>
+          </button>
+          <div class="faq__panel">
+            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </div>
+        <div class="faq__item">
+          <button type="button" class="faq__trigger" data-accordion-trigger>
+            Sed do eiusmod tempor incididunt ut labore?
+            <span class="accordion__icon">+</span>
+          </button>
+          <div class="faq__panel">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+        </div>
+        <div class="faq__item">
+          <button type="button" class="faq__trigger" data-accordion-trigger>
+            Quis nostrud exercitation ullamco laboris?
+            <span class="accordion__icon">+</span>
+          </button>
+          <div class="faq__panel">
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+        </div>
+        <div class="faq__item">
+          <button type="button" class="faq__trigger" data-accordion-trigger>
+            Culpa qui officia deserunt mollit anim?
+            <span class="accordion__icon">+</span>
+          </button>
+          <div class="faq__panel">
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+          </div>
+        </div>
+        <div class="faq__item">
+          <button type="button" class="faq__trigger" data-accordion-trigger>
+            Consectetur adipiscing elit sed do eiusmod?
+            <span class="accordion__icon">+</span>
+          </button>
+          <div class="faq__panel">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</p>
+          </div>
+        </div>
+        <div class="faq__item">
+          <button type="button" class="faq__trigger" data-accordion-trigger>
+            Tempor incididunt ut labore et dolore magna?
+            <span class="accordion__icon">+</span>
+          </button>
+          <div class="faq__panel">
+            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </div>
+        <div class="faq__item">
+          <button type="button" class="faq__trigger" data-accordion-trigger>
+            Aliqua ut enim ad minim veniam quis?
+            <span class="accordion__icon">+</span>
+          </button>
+          <div class="faq__panel">
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== You might also like ===== -->
+    <section class="related">
+      <h2 class="related__heading">You Might Also Like</h2>
+      <div class="related__grid">
+        <a href="#" class="related__card">
+          <div class="related__media placeholder"></div>
+          <p class="related__name">Lorem Ipsum Dolor</p>
+          <p class="related__price">$39.99</p>
+        </a>
+        <a href="#" class="related__card">
+          <div class="related__media placeholder"></div>
+          <p class="related__name">Sit Amet Consectetur</p>
+          <p class="related__price">$44.99</p>
+        </a>
+        <a href="#" class="related__card">
+          <div class="related__media placeholder"></div>
+          <p class="related__name">Adipiscing Elit Sed</p>
+          <p class="related__price">$29.99</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- ===== Reviews ===== -->
+    <section class="reviews">
+      <h2 class="reviews__heading">Reviews</h2>
+
+      <div class="reviews__summary">
+        <div class="reviews__score">
+          <span class="reviews__score-number">4.9</span>
+          <span class="reviews__stars">★★★★★</span>
+          <span class="reviews__score-count">66 Reviews</span>
+        </div>
+
+        <div class="reviews__bars">
+          <div class="reviews__bar-row">
+            <span>5</span>
+            <div class="reviews__bar"><span style="width: 88%"></span></div>
+            <span>58</span>
+          </div>
+          <div class="reviews__bar-row">
+            <span>4</span>
+            <div class="reviews__bar"><span style="width: 9%"></span></div>
+            <span>6</span>
+          </div>
+          <div class="reviews__bar-row">
+            <span>3</span>
+            <div class="reviews__bar"><span style="width: 3%"></span></div>
+            <span>2</span>
+          </div>
+          <div class="reviews__bar-row">
+            <span>2</span>
+            <div class="reviews__bar"><span style="width: 0%"></span></div>
+            <span>0</span>
+          </div>
+          <div class="reviews__bar-row">
+            <span>1</span>
+            <div class="reviews__bar"><span style="width: 0%"></span></div>
+            <span>0</span>
+          </div>
+        </div>
+
+        <button type="button" class="btn btn--cart">WRITE A REVIEW</button>
+      </div>
+
+      <div class="reviews__list">
+        <div class="review">
+          <div class="review__header">
+            <span class="review__stars">★★★★★</span>
+            <span class="review__name">Lorem D. <span class="review__verified">✓ Verified</span></span>
+          </div>
+          <p class="review__text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
+        <div class="review">
+          <div class="review__header">
+            <span class="review__stars">★★★★★</span>
+            <span class="review__name">Ipsum T. <span class="review__verified">✓ Verified</span></span>
+          </div>
+          <p class="review__text">
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            laboris nisi ut aliquip ex ea commodo consequat.
+          </p>
+          <div class="review__photo placeholder"></div>
+        </div>
+        <div class="review">
+          <div class="review__header">
+            <span class="review__stars">★★★★★</span>
+            <span class="review__name">Dolor A. <span class="review__verified">✓ Verified</span></span>
+          </div>
+          <p class="review__text">
+            Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Newsletter ===== -->
+    <section class="newsletter-section">
+      <div class="newsletter-section__inner">
+        <h2>Lorem Ipsum Dolor Sit Amet</h2>
+        <p>
+          Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+          labore et dolore magna aliqua.
+        </p>
+        <form class="newsletter-form" id="newsletterForm">
+          <input
+            class="newsletter-form__input"
+            type="email"
+            placeholder="Email Address"
+            required
+          />
+          <button type="submit" class="btn">SUBSCRIBE</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer (same as home) ===== -->
+  <footer class="site-footer" id="site-footer">
+    <div class="site-footer__top">
+      <div class="site-footer__col">
+        <h3>Shop</h3>
+        <a href="#">Lorem</a>
+        <a href="#">Ipsum</a>
+        <a href="#">Dolor</a>
+        <a href="#">Sit Amet</a>
+      </div>
+
+      <div class="site-footer__col">
+        <h3>Support</h3>
+        <a href="#">Lorem</a>
+        <a href="#">Ipsum</a>
+        <a href="#">Dolor</a>
+      </div>
+
+      <div class="site-footer__col">
+        <h3>Company</h3>
+        <a href="#">Lorem</a>
+        <a href="#">Ipsum</a>
+        <a href="#">Dolor</a>
+      </div>
+    </div>
+
+    <div class="site-footer__brand">
+      <div class="site-footer__brand-mark" role="img" aria-label="Dearbeast"></div>
+    </div>
+
+    <div class="site-footer__bottom">
+      <p>&copy; 2026 Dearbeast. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="home.js"></script>
+  <script src="product.js"></script>
+</body>
+</html>

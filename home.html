@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DEARBEAST</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo:wght@800;900&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="home.css" />
+</head>
+<body>
+  <!-- ===== Sección 1: announcement bar + header + hero ===== -->
+  <div class="announcement-bar">
+    Lorem ipsum dolor sit amet consectetur adipiscing elit.
+  </div>
+
+  <header class="site-header" id="siteHeader">
+    <nav class="site-header__nav">
+      <a href="#">NEW</a>
+      <a href="#">SHOP</a>
+      <a href="#">SALE</a>
+      <a href="#">ABOUT US</a>
+    </nav>
+
+    <div class="site-header__actions">
+      <button type="button" class="icon-btn" aria-label="Search">
+        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="9" cy="9" r="6.5" stroke="currentColor" />
+          <line x1="18" y1="18" x2="13.5" y2="13.5" stroke="currentColor" stroke-linecap="round" />
+        </svg>
+      </button>
+      <button type="button" class="icon-btn" aria-label="Account">
+        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="10" cy="6.5" r="3.5" stroke="currentColor" />
+          <path d="M2.5 17c1.2-3.5 4.2-5.5 7.5-5.5s6.3 2 7.5 5.5" stroke="currentColor" stroke-linecap="round" />
+        </svg>
+      </button>
+      <button type="button" class="icon-btn" aria-label="Cart">
+        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5 6.5h10l-.9 9.2a1.5 1.5 0 0 1-1.5 1.3H7.4a1.5 1.5 0 0 1-1.5-1.3L5 6.5Z" stroke="currentColor" />
+          <path d="M7.2 6.5V5a2.8 2.8 0 0 1 5.6 0v1.5" stroke="currentColor" />
+        </svg>
+        <span class="icon-btn__count">0</span>
+      </button>
+      <button type="button" class="icon-btn menu-toggle" id="menuToggle" aria-label="Menu">
+        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line x1="2.5" y1="6" x2="17.5" y2="6" stroke="currentColor" stroke-linecap="round" />
+          <line x1="2.5" y1="14" x2="17.5" y2="14" stroke="currentColor" stroke-linecap="round" />
+        </svg>
+      </button>
+    </div>
+
+    <a href="home.html" class="site-header__logo-scrolled">
+      <img src="Logo.svg" alt="Dearbeast" />
+    </a>
+  </header>
+
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="#">NEW</a>
+    <a href="#">SHOP</a>
+    <a href="#">SALE</a>
+    <a href="#">ABOUT US</a>
+  </nav>
+
+  <section class="hero">
+    <div class="hero__wordmark">DEARBEAST</div>
+    <div class="hero__content">
+      <p class="hero__tagline">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </p>
+      <a href="#" class="btn btn--outline">SHOP NOW</a>
+    </div>
+  </section>
+
+  <!-- ===== Sección 2: Shop the look ===== -->
+  <section class="shop-the-look" id="shop-the-look">
+    <div class="shop-the-look__image">
+      <span class="shop-the-look__label">Shop The Look</span>
+    </div>
+    <div class="shop-the-look__panel">
+      <img class="shop-the-look__thumb" src="image1.jpeg" alt="" />
+      <p class="shop-the-look__text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </p>
+      <a href="product.html" class="btn btn--outline">SHOP NOW</a>
+    </div>
+  </section>
+
+  <!-- ===== Sección 3: Newsletter + About ===== -->
+  <section class="about-newsletter">
+    <div class="about-newsletter__col">
+      <h2>About Dearbeast</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+        ad minim veniam, quis nostrud exercitation ullamco laboris.
+      </p>
+    </div>
+    <div class="about-newsletter__col">
+      <h2>Lorem ipsum dolor</h2>
+      <p>
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+        nisi ut aliquip ex ea commodo consequat.
+      </p>
+      <form class="newsletter-form" id="newsletterForm">
+        <input
+          class="newsletter-form__input"
+          type="email"
+          placeholder="Email Address"
+          required
+        />
+        <button type="submit" class="btn">SUBSCRIBE</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer" id="site-footer">
+    <div class="site-footer__top">
+      <div class="site-footer__col">
+        <h3>Shop</h3>
+        <a href="#">Lorem</a>
+        <a href="#">Ipsum</a>
+        <a href="#">Dolor</a>
+        <a href="#">Sit Amet</a>
+      </div>
+
+      <div class="site-footer__col">
+        <h3>Support</h3>
+        <a href="#">Lorem</a>
+        <a href="#">Ipsum</a>
+        <a href="#">Dolor</a>
+      </div>
+
+      <div class="site-footer__col">
+        <h3>Company</h3>
+        <a href="#">Lorem</a>
+        <a href="#">Ipsum</a>
+        <a href="#">Dolor</a>
+      </div>
+    </div>
+
+    <div class="site-footer__brand">
+      <div class="site-footer__brand-mark" role="img" aria-label="Dearbeast"></div>
+    </div>
+
+    <div class="site-footer__bottom">
+      <p>&copy; 2026 Dearbeast. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="home.js"></script>
+</body>
+</html>

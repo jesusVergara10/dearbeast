@@ -1,0 +1,525 @@
+@font-face {
+  font-family: "ABC Arizona Flare";
+  src: url("ABCArizonaFlare-Light-Trial.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ABC Arizona Flare";
+  src: url("ABCArizonaFlare-Thin-Trial.otf") format("opentype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Work Sans";
+  src: url("WorkSans-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GT America Standard";
+  src: url("GT-America-Standard-Light-Trial.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+:root {
+  --cream: #f4ecdf;
+  --cream-2: #f0ebde;
+  --dark: #3c281e;
+  --dark-2: #2a2019;
+  --accent: #d6bed8;
+  --accent-hover: #e2d0e3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+}
+
+body {
+  font-family: "ABC Arizona Flare", serif;
+  background-color: var(--cream);
+  color: var(--dark);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ---------- Buttons ---------- */
+
+.btn {
+  display: inline-block;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--dark);
+  background-color: var(--cream);
+  border: none;
+  border-radius: 0;
+  padding: 12px 22px;
+  cursor: pointer;
+  transition: background-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn:hover {
+  background-color: var(--accent);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+
+.btn--outline {
+  background-color: transparent;
+  color: var(--cream-2);
+  border: 1px solid var(--cream);
+}
+
+.btn--outline:hover {
+  color: var(--dark);
+}
+
+/* ---------- Announcement bar ---------- */
+
+.announcement-bar {
+  background-color: var(--dark);
+  color: var(--cream-2);
+  text-align: center;
+  font-family: "GT America Standard", sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  padding: 10px 16px;
+}
+
+/* ---------- Header ---------- */
+
+.site-header {
+  position: fixed;
+  top: 33px;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 40px;
+  padding: 18px 32px;
+  background-color: transparent;
+  color: var(--cream-2);
+  transition: background-color 0.25s ease, padding 0.25s ease, top 0.25s ease;
+}
+
+.site-header.is-scrolled {
+  position: fixed;
+  top: 0;
+  background-color: var(--dark);
+  padding: 12px 32px;
+}
+
+.site-header__logo-scrolled {
+  position: absolute;
+  left: 32px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+}
+
+.site-header.is-scrolled .site-header__logo-scrolled {
+  display: block;
+}
+
+.site-header__logo-scrolled img {
+  height: 20px;
+  width: auto;
+}
+
+.site-header__nav {
+  display: flex;
+  gap: 32px;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+}
+
+.site-header__actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.icon-btn {
+  position: relative;
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+}
+
+.icon-btn svg {
+  width: 19px;
+  height: 19px;
+}
+
+.icon-btn__count {
+  position: absolute;
+  top: -4px;
+  right: -6px;
+  font-family: "Work Sans", sans-serif;
+  font-size: 9px;
+  background-color: var(--accent);
+  color: var(--dark);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.mobile-nav {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  background-color: var(--dark);
+  color: var(--cream-2);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.08em;
+}
+
+.mobile-nav.is-open {
+  display: flex;
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100svh;
+  min-height: 560px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 0 48px 64px;
+  background-image: url("image2.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.hero__wordmark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  font-family: "Archivo", sans-serif;
+  font-weight: 900;
+  font-size: clamp(4rem, 16vw, 13rem);
+  line-height: 1;
+  letter-spacing: 0.01em;
+  color: var(--cream-2);
+  white-space: nowrap;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+  text-align: left;
+  color: var(--cream-2);
+}
+
+.hero__tagline {
+  font-family: "ABC Arizona Flare", serif;
+  font-weight: 100;
+  font-size: 28px;
+  max-width: 480px;
+  margin-bottom: 20px;
+}
+
+.hero .btn {
+  font-size: 12px;
+  padding: 15px 30px;
+}
+
+/* ---------- Shop the look ---------- */
+
+.shop-the-look {
+  display: flex;
+  width: 100%;
+  min-height: 80svh;
+}
+
+.shop-the-look__image {
+  position: relative;
+  flex: 1;
+  background-image: url("image1.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.shop-the-look__label {
+  position: absolute;
+  top: 32px;
+  left: 32px;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--cream-2);
+}
+
+.shop-the-look__panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding: 48px;
+  background-color: var(--cream);
+  text-align: center;
+}
+
+.shop-the-look__thumb {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+}
+
+.shop-the-look__text {
+  font-family: "ABC Arizona Flare", serif;
+  font-weight: 100;
+  font-size: 16px;
+  max-width: 360px;
+  color: var(--dark);
+}
+
+.shop-the-look__panel .btn {
+  font-size: 12px;
+  padding: 15px 30px;
+}
+
+.shop-the-look__panel .btn--outline {
+  border-color: var(--dark-2);
+  color: var(--dark);
+}
+
+/* ---------- About + Newsletter ---------- */
+
+.about-newsletter {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: var(--dark);
+  color: var(--cream-2);
+}
+
+.about-newsletter__col {
+  padding: 72px 56px;
+}
+
+.about-newsletter__col h2 {
+  font-family: "Archivo", sans-serif;
+  font-weight: 900;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-bottom: 18px;
+}
+
+.about-newsletter__col p {
+  font-family: "ABC Arizona Flare", serif;
+  font-weight: 100;
+  font-size: 16px;
+  line-height: 1.5;
+  max-width: 420px;
+  margin-bottom: 24px;
+}
+
+.newsletter-form {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  max-width: 420px;
+}
+
+.newsletter-form__input {
+  flex: 1;
+  font-family: "Work Sans", sans-serif;
+  font-size: 14px;
+  color: var(--cream-2);
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(240, 235, 222, 0.5);
+  border-radius: 0;
+  padding: 8px 2px;
+  outline: none;
+}
+
+.newsletter-form__input::placeholder {
+  font-family: "GT America Standard", sans-serif;
+  color: rgba(240, 235, 222, 0.6);
+}
+
+.newsletter-form__input:focus {
+  border-bottom-color: var(--cream-2);
+}
+
+.newsletter-form .btn {
+  flex-shrink: 0;
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  background-color: var(--cream);
+  color: var(--dark);
+  padding: 56px 48px 24px;
+}
+
+.site-footer__top {
+  display: flex;
+  justify-content: flex-start;
+  gap: 80px;
+  padding-bottom: 40px;
+}
+
+.site-footer__brand {
+  padding: 24px 0 40px;
+}
+
+.site-footer__brand-mark {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4027.77 / 537.63;
+  background-color: var(--dark);
+  -webkit-mask-image: url("Logo.svg");
+  mask-image: url("Logo.svg");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-position: left center;
+  mask-position: left center;
+}
+
+.site-footer__col {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.site-footer__col h3 {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.site-footer__col a {
+  font-family: "ABC Arizona Flare", serif;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.site-footer__bottom {
+  border-top: 1px solid rgba(60, 40, 30, 0.15);
+  padding-top: 20px;
+  font-family: "GT America Standard", sans-serif;
+  font-size: 11px;
+  color: rgba(60, 40, 30, 0.7);
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 860px) {
+  .site-header__nav {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .hero {
+    padding: 0 24px 48px;
+  }
+
+  .hero__tagline {
+    font-size: 17px;
+  }
+
+  .shop-the-look {
+    flex-direction: column;
+  }
+
+  .shop-the-look__image {
+    min-height: 50svh;
+    background-image: url("mobile1.jpeg");
+  }
+
+  .shop-the-look__panel {
+    padding: 40px 28px;
+  }
+
+  .about-newsletter {
+    grid-template-columns: 1fr;
+  }
+
+  .about-newsletter__col {
+    padding: 48px 28px;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+  }
+
+  .site-footer {
+    padding: 40px 24px 20px;
+  }
+
+  .site-footer__top {
+    flex-wrap: wrap;
+    row-gap: 32px;
+    gap: 40px;
+  }
+}
