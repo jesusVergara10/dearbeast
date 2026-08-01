@@ -9,7 +9,7 @@
 }
 
 .product-page__main {
-  padding-top: 128px;
+  padding-top: 96px;
 }
 
 /* ---------- Placeholder ---------- */
@@ -828,8 +828,12 @@
 /* ---------- Mobile ---------- */
 
 @media (max-width: 860px) {
+  .page-product .site-header__logo-scrolled {
+    display: none;
+  }
+
   .product-page__main {
-    padding-top: 140px;
+    padding-top: 84px;
   }
 
   .breadcrumb {
