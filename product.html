@@ -68,6 +68,8 @@
   </nav>
 
   <main class="product-page__main">
+    <div class="checkout-banner" id="checkoutBanner"></div>
+
     <!-- ===== Breadcrumb ===== -->
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <a href="home.html">Home</a>
@@ -128,8 +130,10 @@
             <span class="qty__value" id="qtyValue">1</span>
             <button type="button" class="qty__btn" data-qty-increase aria-label="Increase quantity">+</button>
           </div>
-          <button type="button" class="btn btn--cart">ADD TO CART</button>
+          <button type="button" class="btn btn--cart" id="addToCartBtn">ADD TO CART</button>
         </div>
+
+        <p class="product__checkout-error" id="checkoutError"></p>
 
         <p class="product__shipping-note">Shipping calculated at checkout.</p>
 

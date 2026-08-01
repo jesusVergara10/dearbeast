@@ -61,3 +61,70 @@ if (galleryItems.length && galleryDots.length) {
 
   galleryItems.forEach((item) => observer.observe(item));
 }
+
+// Stripe checkout
+const addToCartBtn = document.getElementById("addToCartBtn");
+const checkoutError = document.getElementById("checkoutError");
+
+if (addToCartBtn) {
+  addToCartBtn.addEventListener("click", async () => {
+    const originalText = addToCartBtn.textContent;
+    checkoutError.textContent = "";
+    checkoutError.classList.remove("is-visible");
+    addToCartBtn.disabled = true;
+    addToCartBtn.textContent = "REDIRECTING…";
+
+    try {
+      const quantity = parseInt(qtyValue ? qtyValue.textContent : "1", 10) || 1;
+
+      const response = await fetch("/api/create-checkout-session", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ quantity }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok || !data.url) {
+        throw new Error(data.error || "Something went wrong.");
+      }
+
+      window.location.href = data.url;
+    } catch (err) {
+      checkoutError.textContent = err.message || "Something went wrong. Please try again.";
+      checkoutError.classList.add("is-visible");
+      addToCartBtn.disabled = false;
+      addToCartBtn.textContent = originalText;
+    }
+  });
+}
+
+// Checkout result banner (?checkout=success|cancelled)
+const checkoutBanner = document.getElementById("checkoutBanner");
+
+if (checkoutBanner) {
+  const params = new URLSearchParams(window.location.search);
+  const checkoutStatus = params.get("checkout");
+
+  if (checkoutStatus === "success") {
+    checkoutBanner.classList.add("is-visible", "is-success");
+    checkoutBanner.innerHTML =
+      '<p>Thank you! Your order was placed successfully.</p>';
+    checkoutBanner.appendChild(makeBannerCloseButton());
+  } else if (checkoutStatus === "cancelled") {
+    checkoutBanner.classList.add("is-visible", "is-cancelled");
+    checkoutBanner.innerHTML = "<p>Checkout was cancelled. No charge was made.</p>";
+    checkoutBanner.appendChild(makeBannerCloseButton());
+  }
+}
+
+function makeBannerCloseButton() {
+  const btn = document.createElement("button");
+  btn.type = "button";
+  btn.setAttribute("aria-label", "Dismiss");
+  btn.textContent = "×";
+  btn.addEventListener("click", () => {
+    checkoutBanner.classList.remove("is-visible");
+  });
+  return btn;
+}

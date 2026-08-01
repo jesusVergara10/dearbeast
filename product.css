@@ -269,6 +269,58 @@
   margin-bottom: 30px;
 }
 
+.product__checkout-error {
+  display: none;
+  font-family: "Work Sans", sans-serif;
+  font-size: 12px;
+  color: #a83b2e;
+  margin-bottom: 16px;
+}
+
+.product__checkout-error.is-visible {
+  display: block;
+}
+
+/* ---------- Checkout banner ---------- */
+
+.checkout-banner {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  max-width: 1400px;
+  margin: 0 auto 24px;
+  padding: 16px 48px;
+}
+
+.checkout-banner.is-visible {
+  display: flex;
+}
+
+.checkout-banner.is-success {
+  background-color: #e4ecdf;
+  color: #35502f;
+}
+
+.checkout-banner.is-cancelled {
+  background-color: var(--cream-2);
+  color: var(--dark);
+}
+
+.checkout-banner p {
+  font-family: "Work Sans", sans-serif;
+  font-size: 13px;
+}
+
+.checkout-banner button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: inherit;
+  line-height: 1;
+}
+
 .product__badges {
   display: flex;
   gap: 20px;
@@ -783,6 +835,10 @@
   .breadcrumb {
     padding: 0 24px;
     font-size: 11px;
+  }
+
+  .checkout-banner {
+    padding: 14px 24px;
   }
 
   .product {
