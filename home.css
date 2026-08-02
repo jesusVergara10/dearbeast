@@ -140,7 +140,7 @@ a {
   gap: 32px;
   font-family: "Work Sans", sans-serif;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 14px;
   letter-spacing: 0.08em;
 }
 
@@ -238,7 +238,7 @@ a {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: min(70%, 760px);
+  width: calc(100% - 96px);
   aspect-ratio: 4027.77 / 537.63;
   background-color: var(--cream-2);
   -webkit-mask-image: url("Logo.svg");
@@ -313,9 +313,10 @@ a {
 }
 
 .shop-the-look__thumb {
-  width: 100%;
-  max-width: 320px;
-  height: auto;
+  width: 354px;
+  height: 443px;
+  max-width: 100%;
+  object-fit: cover;
 }
 
 .shop-the-look__text {
@@ -498,6 +499,13 @@ a {
 
   .shop-the-look__panel {
     padding: 40px 28px;
+  }
+
+  .shop-the-look__thumb {
+    width: 100%;
+    max-width: 354px;
+    height: auto;
+    aspect-ratio: 354 / 443;
   }
 
   .about-newsletter {
