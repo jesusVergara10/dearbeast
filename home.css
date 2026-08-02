@@ -235,7 +235,7 @@ a {
 
 .hero__wordmark {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: calc(100% - 96px);
@@ -252,7 +252,9 @@ a {
 }
 
 .hero__content {
-  position: relative;
+  position: absolute;
+  top: calc(40% + (100vw - 96px) / 14.9834 + 48px);
+  left: 48px;
   z-index: 1;
   text-align: left;
   color: var(--cream-2);

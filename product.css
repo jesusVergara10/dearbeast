@@ -77,10 +77,14 @@
 }
 
 .product__gallery-dots {
+  position: sticky;
+  top: 120px;
   display: flex;
   flex-direction: column;
   gap: 8px;
   padding-top: 260px;
+  align-self: flex-start;
+  height: fit-content;
 }
 
 .product__dot {
