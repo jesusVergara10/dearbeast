@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DEARBEAST</title>
+  <title>DEARBEAST — About Us</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -11,14 +11,15 @@
     rel="stylesheet"
   />
   <link rel="stylesheet" href="home.css" />
+  <link rel="stylesheet" href="about.css" />
 </head>
 <body>
-  <!-- ===== Sección 1: header + hero ===== -->
+  <!-- ===== Header (same as home) ===== -->
   <header class="site-header" id="siteHeader">
     <nav class="site-header__nav">
-      <a href="#">NEW</a>
-      <a href="#">SHOP</a>
-      <a href="#">SALE</a>
+      <a href="home.html">NEW</a>
+      <a href="home.html">SHOP</a>
+      <a href="home.html">SALE</a>
       <a href="about.html">ABOUT US</a>
     </nav>
 
@@ -56,63 +57,75 @@
   </header>
 
   <nav class="mobile-nav" id="mobileNav">
-    <a href="#">NEW</a>
-    <a href="#">SHOP</a>
-    <a href="#">SALE</a>
+    <a href="home.html">NEW</a>
+    <a href="home.html">SHOP</a>
+    <a href="home.html">SALE</a>
     <a href="about.html">ABOUT US</a>
   </nav>
 
-  <section class="hero">
-    <div class="hero__wordmark" role="img" aria-label="Dearbeast"></div>
-    <div class="hero__content">
-      <p class="hero__tagline">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      </p>
-      <a href="#" class="btn btn--outline">SHOP NOW</a>
-    </div>
-  </section>
+  <main class="about-page__main">
+    <!-- ===== Hero ===== -->
+    <section class="about-hero placeholder">
+      <div class="about-hero__overlay">
+        <h1 class="about-hero__title">
+          Lorem ipsum dolor sit amet consectetur.
+        </h1>
+      </div>
+    </section>
 
-  <!-- ===== Sección 2: Shop the look ===== -->
-  <section class="shop-the-look" id="shop-the-look">
-    <div class="shop-the-look__image">
-      <span class="shop-the-look__label">Shop The Look</span>
-    </div>
-    <div class="shop-the-look__panel">
-      <img class="shop-the-look__thumb" src="image1.jpeg" alt="" />
-      <p class="shop-the-look__text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      </p>
-      <a href="product.html" class="btn btn--outline">SHOP NOW</a>
-    </div>
-  </section>
+    <!-- ===== Block 1 ===== -->
+    <section class="about-block">
+      <div class="about-block__image placeholder"></div>
+      <div class="about-block__text">
+        <h2>Lorem Ipsum Dolor</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+          ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+          <br /><br />
+          Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+          cupidatat non proident, sunt in culpa qui officia deserunt mollit.
+        </p>
+      </div>
+    </section>
 
-  <!-- ===== Sección 3: Newsletter + About ===== -->
-  <section class="about-newsletter">
-    <div class="about-newsletter__col">
-      <h2>About Dearbeast</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-        ad minim veniam, quis nostrud exercitation ullamco laboris.
-      </p>
-    </div>
-    <div class="about-newsletter__col">
-      <h2>Lorem ipsum dolor</h2>
-      <p>
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-        nisi ut aliquip ex ea commodo consequat.
-      </p>
-      <form class="newsletter-form" id="newsletterForm">
-        <input
-          class="newsletter-form__input"
-          type="email"
-          placeholder="Email Address"
-          required
-        />
-        <button type="submit" class="btn">SUBSCRIBE</button>
-      </form>
-    </div>
-  </section>
+    <!-- ===== Block 2 (reversed) ===== -->
+    <section class="about-block about-block--reverse">
+      <div class="about-block__image placeholder"></div>
+      <div class="about-block__text">
+        <h2>Sit Amet Consectetur</h2>
+        <p>
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+          accusantium doloremque laudantium, totam rem aperiam.
+          <br /><br />
+          Eaque ipsa quae ab illo inventore veritatis et quasi architecto
+          beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
+          voluptas sit aspernatur aut odit aut fugit.
+        </p>
+        <div class="about-block__cta">
+          <a href="home.html" class="btn btn--outline">DISCOVER OUR PRODUCTS</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Block 3 ===== -->
+    <section class="about-block">
+      <div class="about-block__image placeholder"></div>
+      <div class="about-block__text">
+        <h2>Adipiscing Elit Sed</h2>
+        <p>
+          At vero eos et accusamus et iusto odio dignissimos ducimus qui
+          blanditiis praesentium voluptatum deleniti atque corrupti quos
+          dolores et quas molestias excepturi sint occaecati.
+        </p>
+        <div class="about-block__cta">
+          <a href="home.html" class="btn btn--outline">EXPLORE EVERYTHING</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <!-- ===== Footer ===== -->
   <footer class="site-footer" id="site-footer">
